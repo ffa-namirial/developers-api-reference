@@ -1,0 +1,35 @@
+openapi: 3.1.0
+security: []
+info:
+  title: UANATACA ONE-SHOT SIGNATURE API DOCUMENTATION
+  description: 
+    $ref: ./esaw_oneshot.md
+  version: v1
+
+tags:
+- name: Create
+  description: 'Endpoints to start requesting a digital certificate'
+- name: Files
+  description: 'Endpoints to manage files for further use in envelopes'
+- name: Envelope
+  description: 'Endpoints to manage envelopes'
+
+paths:
+  /v1/esawoneshot:
+    servers: 
+      - url:  https://api.sandbox.modernpki.com/api
+    $ref: ./paths/esawoneshot.yaml
+  /v6/file/upload:
+    servers: 
+      - url: https://demo.esignanywhere.net/Api
+    $ref: ./paths/fileupload.yaml
+  /v6/envelope/send:
+    servers: 
+      - url: https://demo.esignanywhere.net/Api 
+    $ref: paths/envelopesend.yaml
+x-tagGroups:
+- name: API Reference
+  tags:
+  - Create
+  - Files
+  - Envelope
