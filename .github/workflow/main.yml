@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Sync to S3
+      run: |
+        # Sync (yaml, css, js, etc.) to S3
+        aws s3 sync . "s3://${{ vars.AWS_S3_BUCKET }}/" \
+          --exclude "*" \
+          --include "*.html" \
+          --include "*.yaml" \
+          --include "*.css" \
+          --include "*.js" \
+          --include "*.png" \
+          --include "*.jpg" \
+          --include "*.svg" \
+          --include "*.js.download" \
+          --exclude ".git*" \
+          --delete
+
+
+      env:
+        AWS_S3_BUCKET: ${{ vars.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ vars.AWS_REGION }}

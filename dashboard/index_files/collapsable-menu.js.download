@@ -1,0 +1,18 @@
+const toggle = document.querySelector(".menu");
+const toggleMenu = document.querySelector(".menu-nav-list");
+
+toggle.addEventListener("click", () => {
+    toggle.classList.toggle("open");
+    toggle.classList == "menu open"
+    ? (toggleMenu.style.display = "flex")
+    : (toggleMenu.style.display = "none");
+});
+
+// Change logo image
+const customProps = window.getComputedStyle(document.documentElement);
+const link = document.getElementById("logoImg");
+const img = document.createElement('img');
+img.id = 'imageFile';
+img.alt = '';
+img.src = customProps.getPropertyValue('--logoFile');
+link.appendChild(img);

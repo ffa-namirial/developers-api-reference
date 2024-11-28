@@ -1,0 +1,5329 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i");
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #ffffff;
+  max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* overflow-x: hidden; */
+}
+
+.w-12 {
+  width: 100% !important;
+}
+
+.w-11 {
+  width: calc((100% / 12) * 11) !important;
+}
+
+.w-10 {
+  width: calc((100% / 12) * 10) !important;
+}
+
+.w-9 {
+  width: calc((100% / 12) * 9) !important;
+}
+
+.w-8 {
+  width: calc((100% / 12) * 8) !important;
+}
+
+.w-7 {
+  width: calc((100% / 12) * 7) !important;
+}
+
+.w-6 {
+  width: calc((100% / 12) * 6) !important;
+}
+
+.w-5 {
+  width: calc((100% / 12) * 5) !important;
+}
+
+.w-4 {
+  width: calc((100% / 12) * 4) !important;
+}
+
+.w-3 {
+  width: calc((100% / 12) * 3) !important;
+}
+
+.w-2 {
+  width: calc((100% / 12) * 2) !important;
+}
+
+.w-1 {
+  width: calc(100% / 12) !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.link {
+  text-decoration: none;
+  color: #009cde;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.link:hover {
+  color: #79ccff;
+}
+
+label[for="enrollment-cloud-pinlabel"] {
+  font-weight: 600;
+}
+
+label[for="enrollment-cloud-puklabel"] {
+  font-weight: 600;
+}
+
+label[for="enrollment-soft-passwordlabel"] {
+  font-weight: 600;
+}
+
+input[type="checkbox"]:not(:checked) ~ .info-message {
+  height: 0px;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 20px;
+  padding: .3rem !important;
+  margin: .5rem 0 .5rem 0;
+  background-color: #4d535f !important;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+input[type="checkbox"]:not(:checked) ~ .info-message p {
+  margin: 0 1rem 0 0 !important;
+  color: white !important;
+}
+
+input[type="checkbox"]:not(:checked) ~ .info-message i {
+  margin: 0 1rem 0 1rem;
+  color: white !important;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input.visible[type="checkbox"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input[type="checkbox"]:checked ~ .info-message {
+  height: auto;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 20px;
+  padding: .3rem !important;
+  margin: .5rem 0 .5rem 0;
+  background-color: #4d535f !important;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+@media (max-width: 500px) {
+  input[type="checkbox"]:checked ~ .info-message {
+    border-radius: 30px;
+    padding: .3rem 1rem .3rem .3rem !important;
+  }
+}
+
+input[type="checkbox"]:checked ~ .info-message p {
+  margin: 0 1rem 0 0 !important;
+  color: white !important;
+}
+
+input[type="checkbox"]:checked ~ .info-message i {
+  margin: 0 1rem 0 1rem;
+  color: white !important;
+}
+
+.message-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  padding: .5rem 1rem .5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.message-banner.info {
+  background-color: #009cde !important;
+}
+
+.message-banner.warning {
+  background-color: #ffc000 !important;
+}
+
+.message-banner.alert {
+  background-color: #F46036 !important;
+}
+
+.message-banner.success {
+  background-color: #80c13e !important;
+}
+
+.message-banner p {
+  margin: 0 1rem 0 0 !important;
+  color: white !important;
+}
+
+.message-banner i {
+  margin: 0 1rem 0 1rem;
+  color: white !important;
+}
+
+.functions-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 800px;
+  padding-bottom: 2rem;
+  margin: 2rem 0;
+}
+
+.functions-container .circle-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #343944;
+  margin: 1rem;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.functions-container .circle-box img {
+  width: 200px;
+  height: auto;
+}
+
+.cookieAcceptBar {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 2;
+  background: #60697e;
+  color: #ffffff;
+  padding: 1rem;
+  z-index: 999999;
+  font-size: 10px;
+  -webkit-box-shadow: 0 -4px 6px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 -4px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cookieAcceptBar p {
+  font-size: 11px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cookieAcceptBar h3 {
+  margin-bottom: 1rem;
+  color: #f8f8f8;
+}
+
+.cookieAcceptBar .cookie-actions {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cookieAcceptBar .cookie-actions p {
+  margin: .5rem;
+}
+
+@media (max-width: 400px) {
+  .cookieAcceptBar .cookie-actions p {
+    margin: 1rem 0;
+  }
+}
+
+.cookieAcceptBar .cookie-actions button {
+  cursor: pointer;
+  border: none;
+  background-color: #343944;
+  color: #ffffff;
+  text-transform: uppercase;
+  height: 20px;
+  padding: 0 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+  margin: 0 .5rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.cookieAcceptBar .cookie-actions button:hover {
+  background-color: #4a5161;
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cookieAcceptBar .cookie-actions button:focus {
+  outline: none;
+}
+
+.cookieAcceptBar .cookie-actions a {
+  color: #343944;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 .5rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.cookieAcceptBar .cookie-actions a:hover {
+  color: white;
+}
+
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 36px;
+  border-radius: 3px;
+  background-color: #343944;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  text-decoration: none;
+  margin: 1rem;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.cta:hover {
+  background-color: #4d535f;
+}
+
+.cta i {
+  margin: 0 1rem 0 1rem;
+}
+
+.cta span {
+  margin: 0 1rem 0 0;
+  font-size: 13px;
+}
+
+.modal-loader {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+}
+
+.modal-loader .loader-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-loader .loader-content p {
+  margin: 1rem 0 1rem 0;
+}
+
+.modal-loader .loader-content i {
+  margin: 1rem;
+}
+
+img.rotate {
+  -webkit-animation: 20s linear infinite rotate;
+          animation: 20s linear infinite rotate;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+img.rotate-reverse {
+  -webkit-animation: 20s linear infinite rotate;
+          animation: 20s linear infinite rotate;
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+img.scale {
+  -webkit-animation: 20s ease-in-out scale;
+          animation: 20s ease-in-out scale;
+}
+
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+main {
+  min-height: calc(100% - 132.53px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main#contact {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../images/contact-bg-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+  margin: 1.414em 0 0.5em;
+  line-height: 1.2;
+  padding: 0 0 0 2rem;
+}
+
+main .first {
+  display: block;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  padding: 5rem 0;
+  margin: 0 auto 0 auto;
+}
+
+main .first#servicio-internal {
+  padding: 0;
+}
+
+main .first#first {
+  padding: 0;
+  background-color: #343944;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+main .first#policy {
+  background-image: url("../images/policy-bg.svg"), -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#eaeaea));
+  background-image: url("../images/policy-bg.svg"), linear-gradient(to bottom, #f7f7f7, #eaeaea);
+  background-size: cover;
+  background-position: center 60px;
+  background-repeat: repeat;
+}
+
+main .first intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-color: #343944;
+}
+
+main .first intro img.intro {
+  width: 80%;
+  margin-top: -400px;
+  border-radius: 0 0 0 10px;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+main .first intro .payoff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding-top: 25rem;
+  padding-bottom: 15rem;
+  background-image: url("../images/home5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1000;
+  width: 100%;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+main .first intro .payoff img {
+  width: 100px;
+  height: 100px;
+  margin-top: 1rem;
+}
+
+main .first intro .payoff h2 {
+  font-size: 3em;
+  font-weight: 200;
+  padding: 0;
+  font-style: italic;
+  color: #343944;
+  margin-top: 1rem;
+}
+
+main .first intro .payoff h2 strong {
+  font-weight: 600;
+  color: #343944;
+}
+
+main .first intro .video {
+  width: 50%;
+  height: 50%;
+  padding: 1rem;
+  background-color: #343944;
+  border-radius: 10px;
+  margin-top: -200px;
+  z-index: 10000;
+}
+
+main .first intro .video video {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  main .first intro .video video {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 1080px) {
+  main .first intro .video {
+    width: 70%;
+    margin-top: -80px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .first intro .video {
+    width: 100%;
+    padding: 0px;
+    border-radius: 0px;
+  }
+}
+
+main .first section#values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+main .first section#values .presentation-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 80%;
+  max-width: 1400px;
+  padding-bottom: 1rem;
+  margin: 2rem;
+  background-color: #f8f8f8;
+}
+
+main .first section#values .presentation-values .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+  height: auto;
+  width: 80%;
+  margin: 1.2rem;
+}
+
+main .first section#values .presentation-values .description.box {
+  width: 250px;
+  height: 280px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  border-bottom: 2px solid #d8494e;
+}
+
+@media (max-width: 1080px) {
+  main .first section#values .presentation-values .description.box {
+    width: 100%;
+    height: auto;
+  }
+}
+
+main .first section#values .presentation-values .description img {
+  width: auto;
+  height: 60px;
+  margin: 1rem;
+}
+
+main .first section#values .presentation-values .description h2 {
+  margin: 0;
+  color: #d8494e;
+}
+
+main .first section#values .presentation-values .description p {
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  line-height: 1.7rem;
+  color: #343944;
+}
+
+main .first section#values .presentation-values .description a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+main .first section#values .presentation-values .description a .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  height: 36px;
+  border-radius: 3px;
+  background-color: #d8494e;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 2rem;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .first section#values .presentation-values .description a .cta:hover {
+  background-color: #343944;
+}
+
+main .first section#values .presentation-values .blockchain-banner {
+  width: 100%;
+  height: 300px;
+  max-width: 1400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  background-image: url("../images/blockchain-banner.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main .first section#values .presentation-values .blockchain-banner img {
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 500px) {
+  main .first section#values .presentation-values .blockchain-banner img {
+    width: 100%;
+  }
+}
+
+main .first section#uanataca {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 3rem 0;
+}
+
+main .first section#uanataca h3 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #343944;
+  font-weight: 200;
+}
+
+main .first section#uanataca h3.services {
+  color: #ffffff;
+}
+
+main .first section#uanataca .presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 80%;
+  max-width: 1440px;
+  padding-bottom: 1rem;
+}
+
+main .first section#uanataca .presentation .description-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+  height: auto;
+  width: 80%;
+  margin: 1.2rem;
+}
+
+main .first section#uanataca .presentation .description-intro a.description-logos {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .first section#uanataca .presentation .description-intro a.description-logos:hover {
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+main .first section#uanataca .presentation .description-intro a.description-logos:active {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+main .first section#uanataca .presentation .description-intro a.description-logos img {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  margin: .5rem;
+}
+
+main .first section#uanataca .presentation .description-intro a.description-logos p {
+  color: #343944;
+  width: auto;
+  text-align: left;
+}
+
+@media (max-width: 550px) {
+  main .first section#uanataca .presentation .description-intro a.description-logos p {
+    text-align: center;
+  }
+}
+
+main .first section#uanataca .presentation .description-intro img {
+  width: auto;
+  height: 60px;
+  margin: 1rem;
+}
+
+main .first section#uanataca .presentation .description-intro h3 {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+}
+
+main .first section#uanataca .presentation .description-intro p {
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+@media (max-width: 1080px) {
+  main .first section#uanataca .presentation .description-intro p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+main .first section#uanataca .presentation .description-intro p strong {
+  font-size: 21px;
+  font-style: italic;
+  line-height: 31px;
+}
+
+@media (max-width: 1080px) {
+  main .first section#uanataca .presentation .description-intro p strong {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+main .first section#politicas, main .first section#tramites, main .first section#descargas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  max-width: 1300px;
+  height: auto;
+  margin: auto;
+}
+
+main .first section#politicas h1, main .first section#politicas h3, main .first section#politicas h4, main .first section#tramites h1, main .first section#tramites h3, main .first section#tramites h4, main .first section#descargas h1, main .first section#descargas h3, main .first section#descargas h4 {
+  color: #343944;
+  margin-bottom: 3rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+main .first section#politicas h4, main .first section#tramites h4, main .first section#descargas h4 {
+  line-height: 1.5;
+}
+
+main .first section#politicas .soporte-box, main .first section#tramites .soporte-box, main .first section#descargas .soporte-box {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .first section#politicas .soporte-box p, main .first section#tramites .soporte-box p, main .first section#descargas .soporte-box p {
+  border-left: 1px solid #d8494e;
+  padding-left: 15px;
+}
+
+main .first section#politicas .politicas-box, main .first section#politicas .historico-box, main .first section#politicas .soporte-box, main .first section#politicas .descargas-box, main .first section#tramites .politicas-box, main .first section#tramites .historico-box, main .first section#tramites .soporte-box, main .first section#tramites .descargas-box, main .first section#descargas .politicas-box, main .first section#descargas .historico-box, main .first section#descargas .soporte-box, main .first section#descargas .descargas-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 2rem 0;
+}
+
+main .first section#politicas .politicas-box ul.soporte-list, main .first section#politicas .historico-box ul.soporte-list, main .first section#politicas .soporte-box ul.soporte-list, main .first section#politicas .descargas-box ul.soporte-list, main .first section#tramites .politicas-box ul.soporte-list, main .first section#tramites .historico-box ul.soporte-list, main .first section#tramites .soporte-box ul.soporte-list, main .first section#tramites .descargas-box ul.soporte-list, main .first section#descargas .politicas-box ul.soporte-list, main .first section#descargas .historico-box ul.soporte-list, main .first section#descargas .soporte-box ul.soporte-list, main .first section#descargas .descargas-box ul.soporte-list {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 700px) {
+  main .first section#politicas .politicas-box ul.soporte-list, main .first section#politicas .historico-box ul.soporte-list, main .first section#politicas .soporte-box ul.soporte-list, main .first section#politicas .descargas-box ul.soporte-list, main .first section#tramites .politicas-box ul.soporte-list, main .first section#tramites .historico-box ul.soporte-list, main .first section#tramites .soporte-box ul.soporte-list, main .first section#tramites .descargas-box ul.soporte-list, main .first section#descargas .politicas-box ul.soporte-list, main .first section#descargas .historico-box ul.soporte-list, main .first section#descargas .soporte-box ul.soporte-list, main .first section#descargas .descargas-box ul.soporte-list {
+    width: 100%;
+  }
+}
+
+main .first section#politicas .politicas-box ul.download-list, main .first section#politicas .historico-box ul.download-list, main .first section#politicas .soporte-box ul.download-list, main .first section#politicas .descargas-box ul.download-list, main .first section#tramites .politicas-box ul.download-list, main .first section#tramites .historico-box ul.download-list, main .first section#tramites .soporte-box ul.download-list, main .first section#tramites .descargas-box ul.download-list, main .first section#descargas .politicas-box ul.download-list, main .first section#descargas .historico-box ul.download-list, main .first section#descargas .soporte-box ul.download-list, main .first section#descargas .descargas-box ul.download-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+@media (max-width: 700px) {
+  main .first section#politicas .politicas-box ul.download-list, main .first section#politicas .historico-box ul.download-list, main .first section#politicas .soporte-box ul.download-list, main .first section#politicas .descargas-box ul.download-list, main .first section#tramites .politicas-box ul.download-list, main .first section#tramites .historico-box ul.download-list, main .first section#tramites .soporte-box ul.download-list, main .first section#tramites .descargas-box ul.download-list, main .first section#descargas .politicas-box ul.download-list, main .first section#descargas .historico-box ul.download-list, main .first section#descargas .soporte-box ul.download-list, main .first section#descargas .descargas-box ul.download-list {
+    width: 100%;
+  }
+}
+
+main .first section#politicas .politicas-box ul.download-list, main .first section#politicas .politicas-box ul.soporte-list, main .first section#politicas .historico-box ul.download-list, main .first section#politicas .historico-box ul.soporte-list, main .first section#politicas .soporte-box ul.download-list, main .first section#politicas .soporte-box ul.soporte-list, main .first section#politicas .descargas-box ul.download-list, main .first section#politicas .descargas-box ul.soporte-list, main .first section#tramites .politicas-box ul.download-list, main .first section#tramites .politicas-box ul.soporte-list, main .first section#tramites .historico-box ul.download-list, main .first section#tramites .historico-box ul.soporte-list, main .first section#tramites .soporte-box ul.download-list, main .first section#tramites .soporte-box ul.soporte-list, main .first section#tramites .descargas-box ul.download-list, main .first section#tramites .descargas-box ul.soporte-list, main .first section#descargas .politicas-box ul.download-list, main .first section#descargas .politicas-box ul.soporte-list, main .first section#descargas .historico-box ul.download-list, main .first section#descargas .historico-box ul.soporte-list, main .first section#descargas .soporte-box ul.download-list, main .first section#descargas .soporte-box ul.soporte-list, main .first section#descargas .descargas-box ul.download-list, main .first section#descargas .descargas-box ul.soporte-list {
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+main .first section#politicas .politicas-box ul.download-list li, main .first section#politicas .politicas-box ul.soporte-list li, main .first section#politicas .historico-box ul.download-list li, main .first section#politicas .historico-box ul.soporte-list li, main .first section#politicas .soporte-box ul.download-list li, main .first section#politicas .soporte-box ul.soporte-list li, main .first section#politicas .descargas-box ul.download-list li, main .first section#politicas .descargas-box ul.soporte-list li, main .first section#tramites .politicas-box ul.download-list li, main .first section#tramites .politicas-box ul.soporte-list li, main .first section#tramites .historico-box ul.download-list li, main .first section#tramites .historico-box ul.soporte-list li, main .first section#tramites .soporte-box ul.download-list li, main .first section#tramites .soporte-box ul.soporte-list li, main .first section#tramites .descargas-box ul.download-list li, main .first section#tramites .descargas-box ul.soporte-list li, main .first section#descargas .politicas-box ul.download-list li, main .first section#descargas .politicas-box ul.soporte-list li, main .first section#descargas .historico-box ul.download-list li, main .first section#descargas .historico-box ul.soporte-list li, main .first section#descargas .soporte-box ul.download-list li, main .first section#descargas .soporte-box ul.soporte-list li, main .first section#descargas .descargas-box ul.download-list li, main .first section#descargas .descargas-box ul.soporte-list li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 700px) {
+  main .first section#politicas .politicas-box ul.download-list li, main .first section#politicas .politicas-box ul.soporte-list li, main .first section#politicas .historico-box ul.download-list li, main .first section#politicas .historico-box ul.soporte-list li, main .first section#politicas .soporte-box ul.download-list li, main .first section#politicas .soporte-box ul.soporte-list li, main .first section#politicas .descargas-box ul.download-list li, main .first section#politicas .descargas-box ul.soporte-list li, main .first section#tramites .politicas-box ul.download-list li, main .first section#tramites .politicas-box ul.soporte-list li, main .first section#tramites .historico-box ul.download-list li, main .first section#tramites .historico-box ul.soporte-list li, main .first section#tramites .soporte-box ul.download-list li, main .first section#tramites .soporte-box ul.soporte-list li, main .first section#tramites .descargas-box ul.download-list li, main .first section#tramites .descargas-box ul.soporte-list li, main .first section#descargas .politicas-box ul.download-list li, main .first section#descargas .politicas-box ul.soporte-list li, main .first section#descargas .historico-box ul.download-list li, main .first section#descargas .historico-box ul.soporte-list li, main .first section#descargas .soporte-box ul.download-list li, main .first section#descargas .soporte-box ul.soporte-list li, main .first section#descargas .descargas-box ul.download-list li, main .first section#descargas .descargas-box ul.soporte-list li {
+    text-align: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #343944;
+  }
+}
+
+main .first section#politicas .politicas-box ul.download-list li img.docs-icon, main .first section#politicas .politicas-box ul.soporte-list li img.docs-icon, main .first section#politicas .historico-box ul.download-list li img.docs-icon, main .first section#politicas .historico-box ul.soporte-list li img.docs-icon, main .first section#politicas .soporte-box ul.download-list li img.docs-icon, main .first section#politicas .soporte-box ul.soporte-list li img.docs-icon, main .first section#politicas .descargas-box ul.download-list li img.docs-icon, main .first section#politicas .descargas-box ul.soporte-list li img.docs-icon, main .first section#tramites .politicas-box ul.download-list li img.docs-icon, main .first section#tramites .politicas-box ul.soporte-list li img.docs-icon, main .first section#tramites .historico-box ul.download-list li img.docs-icon, main .first section#tramites .historico-box ul.soporte-list li img.docs-icon, main .first section#tramites .soporte-box ul.download-list li img.docs-icon, main .first section#tramites .soporte-box ul.soporte-list li img.docs-icon, main .first section#tramites .descargas-box ul.download-list li img.docs-icon, main .first section#tramites .descargas-box ul.soporte-list li img.docs-icon, main .first section#descargas .politicas-box ul.download-list li img.docs-icon, main .first section#descargas .politicas-box ul.soporte-list li img.docs-icon, main .first section#descargas .historico-box ul.download-list li img.docs-icon, main .first section#descargas .historico-box ul.soporte-list li img.docs-icon, main .first section#descargas .soporte-box ul.download-list li img.docs-icon, main .first section#descargas .soporte-box ul.soporte-list li img.docs-icon, main .first section#descargas .descargas-box ul.download-list li img.docs-icon, main .first section#descargas .descargas-box ul.soporte-list li img.docs-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 2rem;
+}
+
+@media (max-width: 700px) {
+  main .first section#politicas .politicas-box ul.download-list li img.docs-icon, main .first section#politicas .politicas-box ul.soporte-list li img.docs-icon, main .first section#politicas .historico-box ul.download-list li img.docs-icon, main .first section#politicas .historico-box ul.soporte-list li img.docs-icon, main .first section#politicas .soporte-box ul.download-list li img.docs-icon, main .first section#politicas .soporte-box ul.soporte-list li img.docs-icon, main .first section#politicas .descargas-box ul.download-list li img.docs-icon, main .first section#politicas .descargas-box ul.soporte-list li img.docs-icon, main .first section#tramites .politicas-box ul.download-list li img.docs-icon, main .first section#tramites .politicas-box ul.soporte-list li img.docs-icon, main .first section#tramites .historico-box ul.download-list li img.docs-icon, main .first section#tramites .historico-box ul.soporte-list li img.docs-icon, main .first section#tramites .soporte-box ul.download-list li img.docs-icon, main .first section#tramites .soporte-box ul.soporte-list li img.docs-icon, main .first section#tramites .descargas-box ul.download-list li img.docs-icon, main .first section#tramites .descargas-box ul.soporte-list li img.docs-icon, main .first section#descargas .politicas-box ul.download-list li img.docs-icon, main .first section#descargas .politicas-box ul.soporte-list li img.docs-icon, main .first section#descargas .historico-box ul.download-list li img.docs-icon, main .first section#descargas .historico-box ul.soporte-list li img.docs-icon, main .first section#descargas .soporte-box ul.download-list li img.docs-icon, main .first section#descargas .soporte-box ul.soporte-list li img.docs-icon, main .first section#descargas .descargas-box ul.download-list li img.docs-icon, main .first section#descargas .descargas-box ul.soporte-list li img.docs-icon {
+    margin: 0 0 1rem 0;
+  }
+}
+
+main .first section#politicas .politicas-box ul.download-list li a, main .first section#politicas .politicas-box ul.soporte-list li a, main .first section#politicas .historico-box ul.download-list li a, main .first section#politicas .historico-box ul.soporte-list li a, main .first section#politicas .soporte-box ul.download-list li a, main .first section#politicas .soporte-box ul.soporte-list li a, main .first section#politicas .descargas-box ul.download-list li a, main .first section#politicas .descargas-box ul.soporte-list li a, main .first section#tramites .politicas-box ul.download-list li a, main .first section#tramites .politicas-box ul.soporte-list li a, main .first section#tramites .historico-box ul.download-list li a, main .first section#tramites .historico-box ul.soporte-list li a, main .first section#tramites .soporte-box ul.download-list li a, main .first section#tramites .soporte-box ul.soporte-list li a, main .first section#tramites .descargas-box ul.download-list li a, main .first section#tramites .descargas-box ul.soporte-list li a, main .first section#descargas .politicas-box ul.download-list li a, main .first section#descargas .politicas-box ul.soporte-list li a, main .first section#descargas .historico-box ul.download-list li a, main .first section#descargas .historico-box ul.soporte-list li a, main .first section#descargas .soporte-box ul.download-list li a, main .first section#descargas .soporte-box ul.soporte-list li a, main .first section#descargas .descargas-box ul.download-list li a, main .first section#descargas .descargas-box ul.soporte-list li a {
+  text-decoration: none;
+  color: #997bb7;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .first section#politicas .politicas-box ul.download-list li a:hover, main .first section#politicas .politicas-box ul.soporte-list li a:hover, main .first section#politicas .historico-box ul.download-list li a:hover, main .first section#politicas .historico-box ul.soporte-list li a:hover, main .first section#politicas .soporte-box ul.download-list li a:hover, main .first section#politicas .soporte-box ul.soporte-list li a:hover, main .first section#politicas .descargas-box ul.download-list li a:hover, main .first section#politicas .descargas-box ul.soporte-list li a:hover, main .first section#tramites .politicas-box ul.download-list li a:hover, main .first section#tramites .politicas-box ul.soporte-list li a:hover, main .first section#tramites .historico-box ul.download-list li a:hover, main .first section#tramites .historico-box ul.soporte-list li a:hover, main .first section#tramites .soporte-box ul.download-list li a:hover, main .first section#tramites .soporte-box ul.soporte-list li a:hover, main .first section#tramites .descargas-box ul.download-list li a:hover, main .first section#tramites .descargas-box ul.soporte-list li a:hover, main .first section#descargas .politicas-box ul.download-list li a:hover, main .first section#descargas .politicas-box ul.soporte-list li a:hover, main .first section#descargas .historico-box ul.download-list li a:hover, main .first section#descargas .historico-box ul.soporte-list li a:hover, main .first section#descargas .soporte-box ul.download-list li a:hover, main .first section#descargas .soporte-box ul.soporte-list li a:hover, main .first section#descargas .descargas-box ul.download-list li a:hover, main .first section#descargas .descargas-box ul.soporte-list li a:hover {
+  color: #5689dc;
+}
+
+main .first section#politicas .politicas-box ul.download-list li .text-ocsp, main .first section#politicas .politicas-box ul.soporte-list li .text-ocsp, main .first section#politicas .historico-box ul.download-list li .text-ocsp, main .first section#politicas .historico-box ul.soporte-list li .text-ocsp, main .first section#politicas .soporte-box ul.download-list li .text-ocsp, main .first section#politicas .soporte-box ul.soporte-list li .text-ocsp, main .first section#politicas .descargas-box ul.download-list li .text-ocsp, main .first section#politicas .descargas-box ul.soporte-list li .text-ocsp, main .first section#tramites .politicas-box ul.download-list li .text-ocsp, main .first section#tramites .politicas-box ul.soporte-list li .text-ocsp, main .first section#tramites .historico-box ul.download-list li .text-ocsp, main .first section#tramites .historico-box ul.soporte-list li .text-ocsp, main .first section#tramites .soporte-box ul.download-list li .text-ocsp, main .first section#tramites .soporte-box ul.soporte-list li .text-ocsp, main .first section#tramites .descargas-box ul.download-list li .text-ocsp, main .first section#tramites .descargas-box ul.soporte-list li .text-ocsp, main .first section#descargas .politicas-box ul.download-list li .text-ocsp, main .first section#descargas .politicas-box ul.soporte-list li .text-ocsp, main .first section#descargas .historico-box ul.download-list li .text-ocsp, main .first section#descargas .historico-box ul.soporte-list li .text-ocsp, main .first section#descargas .soporte-box ul.download-list li .text-ocsp, main .first section#descargas .soporte-box ul.soporte-list li .text-ocsp, main .first section#descargas .descargas-box ul.download-list li .text-ocsp, main .first section#descargas .descargas-box ul.soporte-list li .text-ocsp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .first section#politicas .politicas-box ul.download-list li .text-ocsp span#title, main .first section#politicas .politicas-box ul.soporte-list li .text-ocsp span#title, main .first section#politicas .historico-box ul.download-list li .text-ocsp span#title, main .first section#politicas .historico-box ul.soporte-list li .text-ocsp span#title, main .first section#politicas .soporte-box ul.download-list li .text-ocsp span#title, main .first section#politicas .soporte-box ul.soporte-list li .text-ocsp span#title, main .first section#politicas .descargas-box ul.download-list li .text-ocsp span#title, main .first section#politicas .descargas-box ul.soporte-list li .text-ocsp span#title, main .first section#tramites .politicas-box ul.download-list li .text-ocsp span#title, main .first section#tramites .politicas-box ul.soporte-list li .text-ocsp span#title, main .first section#tramites .historico-box ul.download-list li .text-ocsp span#title, main .first section#tramites .historico-box ul.soporte-list li .text-ocsp span#title, main .first section#tramites .soporte-box ul.download-list li .text-ocsp span#title, main .first section#tramites .soporte-box ul.soporte-list li .text-ocsp span#title, main .first section#tramites .descargas-box ul.download-list li .text-ocsp span#title, main .first section#tramites .descargas-box ul.soporte-list li .text-ocsp span#title, main .first section#descargas .politicas-box ul.download-list li .text-ocsp span#title, main .first section#descargas .politicas-box ul.soporte-list li .text-ocsp span#title, main .first section#descargas .historico-box ul.download-list li .text-ocsp span#title, main .first section#descargas .historico-box ul.soporte-list li .text-ocsp span#title, main .first section#descargas .soporte-box ul.download-list li .text-ocsp span#title, main .first section#descargas .soporte-box ul.soporte-list li .text-ocsp span#title, main .first section#descargas .descargas-box ul.download-list li .text-ocsp span#title, main .first section#descargas .descargas-box ul.soporte-list li .text-ocsp span#title {
+  font-weight: bolder;
+}
+
+main .first section#politicas .politicas-box ul.download-list li .language-downloads, main .first section#politicas .politicas-box ul.soporte-list li .language-downloads, main .first section#politicas .historico-box ul.download-list li .language-downloads, main .first section#politicas .historico-box ul.soporte-list li .language-downloads, main .first section#politicas .soporte-box ul.download-list li .language-downloads, main .first section#politicas .soporte-box ul.soporte-list li .language-downloads, main .first section#politicas .descargas-box ul.download-list li .language-downloads, main .first section#politicas .descargas-box ul.soporte-list li .language-downloads, main .first section#tramites .politicas-box ul.download-list li .language-downloads, main .first section#tramites .politicas-box ul.soporte-list li .language-downloads, main .first section#tramites .historico-box ul.download-list li .language-downloads, main .first section#tramites .historico-box ul.soporte-list li .language-downloads, main .first section#tramites .soporte-box ul.download-list li .language-downloads, main .first section#tramites .soporte-box ul.soporte-list li .language-downloads, main .first section#tramites .descargas-box ul.download-list li .language-downloads, main .first section#tramites .descargas-box ul.soporte-list li .language-downloads, main .first section#descargas .politicas-box ul.download-list li .language-downloads, main .first section#descargas .politicas-box ul.soporte-list li .language-downloads, main .first section#descargas .historico-box ul.download-list li .language-downloads, main .first section#descargas .historico-box ul.soporte-list li .language-downloads, main .first section#descargas .soporte-box ul.download-list li .language-downloads, main .first section#descargas .soporte-box ul.soporte-list li .language-downloads, main .first section#descargas .descargas-box ul.download-list li .language-downloads, main .first section#descargas .descargas-box ul.soporte-list li .language-downloads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 15px;
+}
+
+@media (max-width: 700px) {
+  main .first section#politicas .politicas-box ul.download-list li .language-downloads, main .first section#politicas .politicas-box ul.soporte-list li .language-downloads, main .first section#politicas .historico-box ul.download-list li .language-downloads, main .first section#politicas .historico-box ul.soporte-list li .language-downloads, main .first section#politicas .soporte-box ul.download-list li .language-downloads, main .first section#politicas .soporte-box ul.soporte-list li .language-downloads, main .first section#politicas .descargas-box ul.download-list li .language-downloads, main .first section#politicas .descargas-box ul.soporte-list li .language-downloads, main .first section#tramites .politicas-box ul.download-list li .language-downloads, main .first section#tramites .politicas-box ul.soporte-list li .language-downloads, main .first section#tramites .historico-box ul.download-list li .language-downloads, main .first section#tramites .historico-box ul.soporte-list li .language-downloads, main .first section#tramites .soporte-box ul.download-list li .language-downloads, main .first section#tramites .soporte-box ul.soporte-list li .language-downloads, main .first section#tramites .descargas-box ul.download-list li .language-downloads, main .first section#tramites .descargas-box ul.soporte-list li .language-downloads, main .first section#descargas .politicas-box ul.download-list li .language-downloads, main .first section#descargas .politicas-box ul.soporte-list li .language-downloads, main .first section#descargas .historico-box ul.download-list li .language-downloads, main .first section#descargas .historico-box ul.soporte-list li .language-downloads, main .first section#descargas .soporte-box ul.download-list li .language-downloads, main .first section#descargas .soporte-box ul.soporte-list li .language-downloads, main .first section#descargas .descargas-box ul.download-list li .language-downloads, main .first section#descargas .descargas-box ul.soporte-list li .language-downloads {
+    margin-bottom: 1rem;
+    margin-right: 0px;
+  }
+}
+
+main .first section#politicas .politicas-box ul.download-list li .language-downloads a, main .first section#politicas .politicas-box ul.soporte-list li .language-downloads a, main .first section#politicas .historico-box ul.download-list li .language-downloads a, main .first section#politicas .historico-box ul.soporte-list li .language-downloads a, main .first section#politicas .soporte-box ul.download-list li .language-downloads a, main .first section#politicas .soporte-box ul.soporte-list li .language-downloads a, main .first section#politicas .descargas-box ul.download-list li .language-downloads a, main .first section#politicas .descargas-box ul.soporte-list li .language-downloads a, main .first section#tramites .politicas-box ul.download-list li .language-downloads a, main .first section#tramites .politicas-box ul.soporte-list li .language-downloads a, main .first section#tramites .historico-box ul.download-list li .language-downloads a, main .first section#tramites .historico-box ul.soporte-list li .language-downloads a, main .first section#tramites .soporte-box ul.download-list li .language-downloads a, main .first section#tramites .soporte-box ul.soporte-list li .language-downloads a, main .first section#tramites .descargas-box ul.download-list li .language-downloads a, main .first section#tramites .descargas-box ul.soporte-list li .language-downloads a, main .first section#descargas .politicas-box ul.download-list li .language-downloads a, main .first section#descargas .politicas-box ul.soporte-list li .language-downloads a, main .first section#descargas .historico-box ul.download-list li .language-downloads a, main .first section#descargas .historico-box ul.soporte-list li .language-downloads a, main .first section#descargas .soporte-box ul.download-list li .language-downloads a, main .first section#descargas .soporte-box ul.soporte-list li .language-downloads a, main .first section#descargas .descargas-box ul.download-list li .language-downloads a, main .first section#descargas .descargas-box ul.soporte-list li .language-downloads a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 0 30px;
+  background-color: #d8494e;
+  font-size: 14px;
+}
+
+main .first section#politicas .politicas-box ul.download-list li .language-downloads a span, main .first section#politicas .politicas-box ul.soporte-list li .language-downloads a span, main .first section#politicas .historico-box ul.download-list li .language-downloads a span, main .first section#politicas .historico-box ul.soporte-list li .language-downloads a span, main .first section#politicas .soporte-box ul.download-list li .language-downloads a span, main .first section#politicas .soporte-box ul.soporte-list li .language-downloads a span, main .first section#politicas .descargas-box ul.download-list li .language-downloads a span, main .first section#politicas .descargas-box ul.soporte-list li .language-downloads a span, main .first section#tramites .politicas-box ul.download-list li .language-downloads a span, main .first section#tramites .politicas-box ul.soporte-list li .language-downloads a span, main .first section#tramites .historico-box ul.download-list li .language-downloads a span, main .first section#tramites .historico-box ul.soporte-list li .language-downloads a span, main .first section#tramites .soporte-box ul.download-list li .language-downloads a span, main .first section#tramites .soporte-box ul.soporte-list li .language-downloads a span, main .first section#tramites .descargas-box ul.download-list li .language-downloads a span, main .first section#tramites .descargas-box ul.soporte-list li .language-downloads a span, main .first section#descargas .politicas-box ul.download-list li .language-downloads a span, main .first section#descargas .politicas-box ul.soporte-list li .language-downloads a span, main .first section#descargas .historico-box ul.download-list li .language-downloads a span, main .first section#descargas .historico-box ul.soporte-list li .language-downloads a span, main .first section#descargas .soporte-box ul.download-list li .language-downloads a span, main .first section#descargas .soporte-box ul.soporte-list li .language-downloads a span, main .first section#descargas .descargas-box ul.download-list li .language-downloads a span, main .first section#descargas .descargas-box ul.soporte-list li .language-downloads a span {
+  color: #ffffff;
+  text-align: center;
+}
+
+main .first section#politicas .politicas-box ul.download-list li .language-downloads a:hover, main .first section#politicas .politicas-box ul.soporte-list li .language-downloads a:hover, main .first section#politicas .historico-box ul.download-list li .language-downloads a:hover, main .first section#politicas .historico-box ul.soporte-list li .language-downloads a:hover, main .first section#politicas .soporte-box ul.download-list li .language-downloads a:hover, main .first section#politicas .soporte-box ul.soporte-list li .language-downloads a:hover, main .first section#politicas .descargas-box ul.download-list li .language-downloads a:hover, main .first section#politicas .descargas-box ul.soporte-list li .language-downloads a:hover, main .first section#tramites .politicas-box ul.download-list li .language-downloads a:hover, main .first section#tramites .politicas-box ul.soporte-list li .language-downloads a:hover, main .first section#tramites .historico-box ul.download-list li .language-downloads a:hover, main .first section#tramites .historico-box ul.soporte-list li .language-downloads a:hover, main .first section#tramites .soporte-box ul.download-list li .language-downloads a:hover, main .first section#tramites .soporte-box ul.soporte-list li .language-downloads a:hover, main .first section#tramites .descargas-box ul.download-list li .language-downloads a:hover, main .first section#tramites .descargas-box ul.soporte-list li .language-downloads a:hover, main .first section#descargas .politicas-box ul.download-list li .language-downloads a:hover, main .first section#descargas .politicas-box ul.soporte-list li .language-downloads a:hover, main .first section#descargas .historico-box ul.download-list li .language-downloads a:hover, main .first section#descargas .historico-box ul.soporte-list li .language-downloads a:hover, main .first section#descargas .soporte-box ul.download-list li .language-downloads a:hover, main .first section#descargas .soporte-box ul.soporte-list li .language-downloads a:hover, main .first section#descargas .descargas-box ul.download-list li .language-downloads a:hover, main .first section#descargas .descargas-box ul.soporte-list li .language-downloads a:hover {
+  -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+main .first section#politicas .politicas-box ul.download-list li .language-downloads a.es-button, main .first section#politicas .politicas-box ul.soporte-list li .language-downloads a.es-button, main .first section#politicas .historico-box ul.download-list li .language-downloads a.es-button, main .first section#politicas .historico-box ul.soporte-list li .language-downloads a.es-button, main .first section#politicas .soporte-box ul.download-list li .language-downloads a.es-button, main .first section#politicas .soporte-box ul.soporte-list li .language-downloads a.es-button, main .first section#politicas .descargas-box ul.download-list li .language-downloads a.es-button, main .first section#politicas .descargas-box ul.soporte-list li .language-downloads a.es-button, main .first section#tramites .politicas-box ul.download-list li .language-downloads a.es-button, main .first section#tramites .politicas-box ul.soporte-list li .language-downloads a.es-button, main .first section#tramites .historico-box ul.download-list li .language-downloads a.es-button, main .first section#tramites .historico-box ul.soporte-list li .language-downloads a.es-button, main .first section#tramites .soporte-box ul.download-list li .language-downloads a.es-button, main .first section#tramites .soporte-box ul.soporte-list li .language-downloads a.es-button, main .first section#tramites .descargas-box ul.download-list li .language-downloads a.es-button, main .first section#tramites .descargas-box ul.soporte-list li .language-downloads a.es-button, main .first section#descargas .politicas-box ul.download-list li .language-downloads a.es-button, main .first section#descargas .politicas-box ul.soporte-list li .language-downloads a.es-button, main .first section#descargas .historico-box ul.download-list li .language-downloads a.es-button, main .first section#descargas .historico-box ul.soporte-list li .language-downloads a.es-button, main .first section#descargas .soporte-box ul.download-list li .language-downloads a.es-button, main .first section#descargas .soporte-box ul.soporte-list li .language-downloads a.es-button, main .first section#descargas .descargas-box ul.download-list li .language-downloads a.es-button, main .first section#descargas .descargas-box ul.soporte-list li .language-downloads a.es-button {
+  margin: 5px;
+  width: 70px;
+}
+
+main .first section#politicas .politicas-box ul.download-list li .language-downloads a.en-button, main .first section#politicas .politicas-box ul.soporte-list li .language-downloads a.en-button, main .first section#politicas .historico-box ul.download-list li .language-downloads a.en-button, main .first section#politicas .historico-box ul.soporte-list li .language-downloads a.en-button, main .first section#politicas .soporte-box ul.download-list li .language-downloads a.en-button, main .first section#politicas .soporte-box ul.soporte-list li .language-downloads a.en-button, main .first section#politicas .descargas-box ul.download-list li .language-downloads a.en-button, main .first section#politicas .descargas-box ul.soporte-list li .language-downloads a.en-button, main .first section#tramites .politicas-box ul.download-list li .language-downloads a.en-button, main .first section#tramites .politicas-box ul.soporte-list li .language-downloads a.en-button, main .first section#tramites .historico-box ul.download-list li .language-downloads a.en-button, main .first section#tramites .historico-box ul.soporte-list li .language-downloads a.en-button, main .first section#tramites .soporte-box ul.download-list li .language-downloads a.en-button, main .first section#tramites .soporte-box ul.soporte-list li .language-downloads a.en-button, main .first section#tramites .descargas-box ul.download-list li .language-downloads a.en-button, main .first section#tramites .descargas-box ul.soporte-list li .language-downloads a.en-button, main .first section#descargas .politicas-box ul.download-list li .language-downloads a.en-button, main .first section#descargas .politicas-box ul.soporte-list li .language-downloads a.en-button, main .first section#descargas .historico-box ul.download-list li .language-downloads a.en-button, main .first section#descargas .historico-box ul.soporte-list li .language-downloads a.en-button, main .first section#descargas .soporte-box ul.download-list li .language-downloads a.en-button, main .first section#descargas .soporte-box ul.soporte-list li .language-downloads a.en-button, main .first section#descargas .descargas-box ul.download-list li .language-downloads a.en-button, main .first section#descargas .descargas-box ul.soporte-list li .language-downloads a.en-button {
+  margin: 5px;
+  width: 70px;
+}
+
+main .first section#politicas .politicas-box ul.download-list li span#download, main .first section#politicas .politicas-box ul.soporte-list li span#download, main .first section#politicas .historico-box ul.download-list li span#download, main .first section#politicas .historico-box ul.soporte-list li span#download, main .first section#politicas .soporte-box ul.download-list li span#download, main .first section#politicas .soporte-box ul.soporte-list li span#download, main .first section#politicas .descargas-box ul.download-list li span#download, main .first section#politicas .descargas-box ul.soporte-list li span#download, main .first section#tramites .politicas-box ul.download-list li span#download, main .first section#tramites .politicas-box ul.soporte-list li span#download, main .first section#tramites .historico-box ul.download-list li span#download, main .first section#tramites .historico-box ul.soporte-list li span#download, main .first section#tramites .soporte-box ul.download-list li span#download, main .first section#tramites .soporte-box ul.soporte-list li span#download, main .first section#tramites .descargas-box ul.download-list li span#download, main .first section#tramites .descargas-box ul.soporte-list li span#download, main .first section#descargas .politicas-box ul.download-list li span#download, main .first section#descargas .politicas-box ul.soporte-list li span#download, main .first section#descargas .historico-box ul.download-list li span#download, main .first section#descargas .historico-box ul.soporte-list li span#download, main .first section#descargas .soporte-box ul.download-list li span#download, main .first section#descargas .soporte-box ul.soporte-list li span#download, main .first section#descargas .descargas-box ul.download-list li span#download, main .first section#descargas .descargas-box ul.soporte-list li span#download {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 15px;
+  color: #7a7a7a;
+}
+
+main .first section#politicas .politicas-box ul.download-list li a.go-button, main .first section#politicas .politicas-box ul.soporte-list li a.go-button, main .first section#politicas .historico-box ul.download-list li a.go-button, main .first section#politicas .historico-box ul.soporte-list li a.go-button, main .first section#politicas .soporte-box ul.download-list li a.go-button, main .first section#politicas .soporte-box ul.soporte-list li a.go-button, main .first section#politicas .descargas-box ul.download-list li a.go-button, main .first section#politicas .descargas-box ul.soporte-list li a.go-button, main .first section#tramites .politicas-box ul.download-list li a.go-button, main .first section#tramites .politicas-box ul.soporte-list li a.go-button, main .first section#tramites .historico-box ul.download-list li a.go-button, main .first section#tramites .historico-box ul.soporte-list li a.go-button, main .first section#tramites .soporte-box ul.download-list li a.go-button, main .first section#tramites .soporte-box ul.soporte-list li a.go-button, main .first section#tramites .descargas-box ul.download-list li a.go-button, main .first section#tramites .descargas-box ul.soporte-list li a.go-button, main .first section#descargas .politicas-box ul.download-list li a.go-button, main .first section#descargas .politicas-box ul.soporte-list li a.go-button, main .first section#descargas .historico-box ul.download-list li a.go-button, main .first section#descargas .historico-box ul.soporte-list li a.go-button, main .first section#descargas .soporte-box ul.download-list li a.go-button, main .first section#descargas .soporte-box ul.soporte-list li a.go-button, main .first section#descargas .descargas-box ul.download-list li a.go-button, main .first section#descargas .descargas-box ul.soporte-list li a.go-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 140px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 0 30px;
+  background-color: #d8494e;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+main .first section#politicas .politicas-box ul.download-list li a.go-button span, main .first section#politicas .politicas-box ul.soporte-list li a.go-button span, main .first section#politicas .historico-box ul.download-list li a.go-button span, main .first section#politicas .historico-box ul.soporte-list li a.go-button span, main .first section#politicas .soporte-box ul.download-list li a.go-button span, main .first section#politicas .soporte-box ul.soporte-list li a.go-button span, main .first section#politicas .descargas-box ul.download-list li a.go-button span, main .first section#politicas .descargas-box ul.soporte-list li a.go-button span, main .first section#tramites .politicas-box ul.download-list li a.go-button span, main .first section#tramites .politicas-box ul.soporte-list li a.go-button span, main .first section#tramites .historico-box ul.download-list li a.go-button span, main .first section#tramites .historico-box ul.soporte-list li a.go-button span, main .first section#tramites .soporte-box ul.download-list li a.go-button span, main .first section#tramites .soporte-box ul.soporte-list li a.go-button span, main .first section#tramites .descargas-box ul.download-list li a.go-button span, main .first section#tramites .descargas-box ul.soporte-list li a.go-button span, main .first section#descargas .politicas-box ul.download-list li a.go-button span, main .first section#descargas .politicas-box ul.soporte-list li a.go-button span, main .first section#descargas .historico-box ul.download-list li a.go-button span, main .first section#descargas .historico-box ul.soporte-list li a.go-button span, main .first section#descargas .soporte-box ul.download-list li a.go-button span, main .first section#descargas .soporte-box ul.soporte-list li a.go-button span, main .first section#descargas .descargas-box ul.download-list li a.go-button span, main .first section#descargas .descargas-box ul.soporte-list li a.go-button span {
+  color: #ffffff;
+  text-align: center;
+}
+
+main .first section#politicas .politicas-box ul.download-list li a.go-button:hover, main .first section#politicas .politicas-box ul.soporte-list li a.go-button:hover, main .first section#politicas .historico-box ul.download-list li a.go-button:hover, main .first section#politicas .historico-box ul.soporte-list li a.go-button:hover, main .first section#politicas .soporte-box ul.download-list li a.go-button:hover, main .first section#politicas .soporte-box ul.soporte-list li a.go-button:hover, main .first section#politicas .descargas-box ul.download-list li a.go-button:hover, main .first section#politicas .descargas-box ul.soporte-list li a.go-button:hover, main .first section#tramites .politicas-box ul.download-list li a.go-button:hover, main .first section#tramites .politicas-box ul.soporte-list li a.go-button:hover, main .first section#tramites .historico-box ul.download-list li a.go-button:hover, main .first section#tramites .historico-box ul.soporte-list li a.go-button:hover, main .first section#tramites .soporte-box ul.download-list li a.go-button:hover, main .first section#tramites .soporte-box ul.soporte-list li a.go-button:hover, main .first section#tramites .descargas-box ul.download-list li a.go-button:hover, main .first section#tramites .descargas-box ul.soporte-list li a.go-button:hover, main .first section#descargas .politicas-box ul.download-list li a.go-button:hover, main .first section#descargas .politicas-box ul.soporte-list li a.go-button:hover, main .first section#descargas .historico-box ul.download-list li a.go-button:hover, main .first section#descargas .historico-box ul.soporte-list li a.go-button:hover, main .first section#descargas .soporte-box ul.download-list li a.go-button:hover, main .first section#descargas .soporte-box ul.soporte-list li a.go-button:hover, main .first section#descargas .descargas-box ul.download-list li a.go-button:hover, main .first section#descargas .descargas-box ul.soporte-list li a.go-button:hover {
+  -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+main .first section#servicio {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+main .first section#servicio .banner-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 500px) {
+  main .first section#servicio .banner-image {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+main .first section#servicio .banner-image#certificates {
+  background-image: url("../images/certificados.png");
+}
+
+main .first section#servicio .banner-image#remote-signature {
+  background-image: url("../images/firma-remota.png");
+}
+
+main .first section#servicio .banner-image#massive-signature {
+  background-image: url("../images/firma-masiva.png");
+}
+
+main .first section#servicio .banner-image#longlived-signature {
+  background-image: url("../images/firma-longeva.png");
+}
+
+main .first section#servicio .banner-image#verification {
+  background-image: url("../images/verification.png");
+}
+
+main .first section#servicio .banner-image#timestamping {
+  background-image: url("../images/timestamping.png");
+}
+
+main .first section#servicio .banner-image#pki {
+  background-image: url("../images/pki.png");
+}
+
+main .first section#servicio h1 {
+  margin: 6rem 0 2rem 0;
+  font-size: 30px;
+  line-height: 40px;
+  color: #343944;
+  text-align: center;
+  color: #d8494e;
+  font-weight: 300;
+}
+
+main .first section#servicio h1 span {
+  color: #f8f8f8;
+}
+
+main .first section#servicio h1 strong {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+main .first section#servicio h1 strong.big {
+  font-size: 40px;
+}
+
+main .first section#servicio h1 strong.medium {
+  font-size: 30px;
+}
+
+@media (max-width: 500px) {
+  main .first section#servicio h1 strong.medium {
+    font-size: 25px;
+  }
+}
+
+main .first section#servicio h1 strong.title {
+  color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  main .first section#servicio h1 strong {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20rem;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 500px) {
+  main .first section#servicio h1 {
+    font-size: 25px;
+    line-height: 35px;
+    text-align: left;
+  }
+}
+
+main .first section#servicio h1.title {
+  color: #ffffff;
+}
+
+main .first section#servicio h2 {
+  margin: 6rem 0 2rem 0;
+  font-size: 26px;
+  line-height: 40px;
+  color: #343944;
+  font-style: italic;
+  text-align: center;
+  color: #d8494e;
+}
+
+main .first section#servicio h2.title {
+  color: #ffffff;
+}
+
+main .first section#servicio h2 strong {
+  font-weight: 500;
+}
+
+main .first section#servicio .content-row {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0;
+}
+
+main .first section#servicio .content-row.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 1080px) {
+  main .first section#servicio .content-row.reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+main .first section#servicio .content-row.content-top {
+  max-width: 1440px;
+}
+
+main .first section#servicio .content-row.features-list {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .first section#servicio .content-row.graphic {
+  position: relative;
+  background-image: linear-gradient(32deg, #1f0900 0%, #6400af 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1080px) {
+  main .first section#servicio .content-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .first section#servicio .content-row p {
+  width: 40%;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 1rem;
+  text-align: justify;
+}
+
+@media (max-width: 1080px) {
+  main .first section#servicio .content-row p {
+    text-align: left;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+main .first section#servicio .content-row .text-block {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 1080px) {
+  main .first section#servicio .content-row .text-block {
+    width: 80% !important;
+  }
+}
+
+main .first section#servicio .content-row .text-block p {
+  width: 100%;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 1rem;
+  text-align: justify;
+}
+
+@media (max-width: 1080px) {
+  main .first section#servicio .content-row .text-block p {
+    text-align: left;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+main .first section#servicio .content-row .text-block h3 {
+  margin: 1.5em 0 0.5em 1rem;
+  color: #d8494e;
+}
+
+main .first section#servicio .content-row img {
+  width: 40%;
+  margin: 2rem;
+}
+
+@media (max-width: 1080px) {
+  main .first section#servicio .content-row img {
+    width: 80% !important;
+  }
+}
+
+main .first section#servicio .content-row .device-collection .device img {
+  width: 100% !important;
+  margin: 0;
+}
+
+main .first section#servicio .content-row ul.features-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  max-width: 900px;
+  padding-bottom: 3rem;
+}
+
+main .first section#servicio .content-row ul.features-icon li {
+  width: 215px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 1rem;
+  font-size: 21px;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+main .first section#servicio .content-row ul.features-icon li img.autofirma, main .first section#servicio .content-row ul.features-icon li img.blockchain {
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 640px) {
+  main .first section#servicio .content-row ul.features-icon li img.autofirma, main .first section#servicio .content-row ul.features-icon li img.blockchain {
+    width: 16px;
+  }
+}
+
+main .first section#servicio .content-row ul.features-icon li img.apple-android {
+  width: 100px;
+  height: 50px;
+}
+
+@media (max-width: 640px) {
+  main .first section#servicio .content-row ul.features-icon li img.apple-android {
+    width: 32px;
+  }
+}
+
+main .first section#servicio .content-row ul.features-icon li i {
+  margin: 2rem;
+  color: #d8494e;
+  font-size: 50px;
+}
+
+@media (max-width: 640px) {
+  main .first section#servicio .content-row ul.features-icon li {
+    font-size: 16px;
+    width: 70%;
+  }
+}
+
+main .first section#servicio .content-row ul.features-icon li span {
+  max-width: 90%;
+}
+
+main .first section#servicio .content-column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #343944;
+  padding: 2rem 0 6rem 0;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+main .first section#servicio .content-column.light {
+  background-color: #ffffff;
+}
+
+main .first section#servicio .content-column.light h1 {
+  color: #343944;
+}
+
+main .first section#servicio .content-column .tight-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+main .first section#servicio .content-column img.minicon {
+  width: 30px;
+}
+
+main .first section#servicio .content-column ul.infraestructura {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #f3c7c9;
+}
+
+main .first section#servicio .content-column ul.infraestructura li {
+  font-style: italic;
+  margin: 8px 0;
+  line-height: 30px;
+}
+
+main .first section#servicio .content-column .anim-icon {
+  width: 100px;
+  margin: 20px;
+}
+
+main .first section#servicio .content-column h1 {
+  color: #ffffff;
+}
+
+main .first section#servicio .content-column h2 {
+  margin: 2rem 0;
+}
+
+main .first section#servicio .content-column p {
+  font-size: 18px;
+  line-height: 30px;
+  margin: 1rem 1rem 2rem 1rem;
+  padding: 1rem;
+  text-align: justify;
+  color: #f8f8f8;
+}
+
+main .first section#servicio .content-column p.intro {
+  text-align: center;
+  max-width: 840px;
+  padding: 1rem 1rem 3rem 1rem;
+  border-bottom: 1px solid #60697e;
+}
+
+@media (max-width: 500px) {
+  main .first section#servicio .content-column p.intro {
+    text-align: justify;
+  }
+}
+
+main .first section#servicio .content-column p strong {
+  text-align: center;
+}
+
+main .first section#servicio .content-column .image-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0 6rem 0;
+  width: auto;
+}
+
+main .first section#servicio .content-column .image-element.schema {
+  width: 100%;
+}
+
+main .first section#servicio .content-column .image-element img {
+  width: 100%;
+  max-width: 760px;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin: 5px 0 10px 0;
+}
+
+main .first section#servicio .content-column .image-element img.api {
+  width: 95%;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+  margin: 5px 0 10px 0;
+}
+
+main .first section#servicio .content-column .image-element img.schema {
+  width: 100%;
+  max-width: 960px;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+  margin: 1rem 0;
+}
+
+main .first section#servicio .content-column .image-element h1.internal {
+  margin-top: 0;
+}
+
+main .first section#servicio .content-column .image-element h3.internal {
+  font-size: 16px;
+  font-weight: 300;
+  color: #f8f8f8;
+  font-style: italic;
+}
+
+main .first section#servicio .content-column .image-element h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 30px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+main .first section#servicio .content-column .image-element .phone-container.internal {
+  width: 35%;
+  left: auto;
+}
+
+@media (max-width: 600px) {
+  main .first section#servicio .content-column .image-element .phone-container.internal {
+    width: 50%;
+  }
+}
+
+main .first section#servicio .content-column h3.formatos {
+  font-size: 21px;
+  font-weight: 300;
+  color: #343944;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  main .first section#servicio .content-column h3.formatos {
+    margin-left: 20px;
+  }
+}
+
+main .first section#servicio .content-column ul.formatos {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 2rem;
+  line-height: 40px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #3f4552;
+}
+
+@media (max-width: 1080px) {
+  main .first section#servicio .content-column ul.formatos {
+    width: 90%;
+    margin: 2rem 0;
+  }
+}
+
+main .first section#servicio .content-column ul.formatos > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 2em 0;
+  margin: 0 5em;
+  color: #f8f8f8;
+  text-align: center;
+  border-radius: 5px;
+}
+
+main .first section#servicio .content-column ul.formatos > li:nth-child(2n) {
+  background-color: #343944;
+}
+
+main .first section#servicio .content-column ul.formatos > li:nth-last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+main .first section#servicio .content-column ul.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding-top: 3rem;
+  line-height: 40px;
+  max-width: 933px;
+  border-top: 1px solid #60697e;
+}
+
+main .first section#servicio .content-column ul.features > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 215px;
+  height: 200px;
+  position: relative;
+  padding: 2em;
+  margin: 1em;
+  color: #f8f8f8;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 5px;
+  background-color: #343944;
+}
+
+main .first section#servicio .content-column ul.features > li:nth-child(2n) {
+  background-color: #3f4552;
+}
+
+main .first section#servicio .content-column ul.features > li:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 40px;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  background-image: url("../images/mini-icon-detail.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 5px;
+  left: 5px;
+}
+
+main .first section#servicio .content-column h4 {
+  color: #ffffff;
+  font-style: italic;
+}
+
+main .first section#servicio .content-column i {
+  color: #d8494e;
+}
+
+main .second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+main .second section#values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  padding-top: 3rem;
+}
+
+main .second section#servicios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  padding-top: 6rem;
+}
+
+main .second section#servicios img {
+  width: 200px;
+  margin: 6rem 0;
+}
+
+main .second section#servicios h1 {
+  color: #343944;
+  margin-top: 0;
+  margin-bottom: 6rem;
+}
+
+main .second section#servicios .servicios-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.6);
+  margin-bottom: 3rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  main .second section#servicios .servicios-banner {
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
+main .second section#servicios .servicios-banner .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+  -webkit-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+  -moz-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+  -o-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+  color: #fff;
+  overflow: hidden;
+  position: absolute;
+}
+
+main .second section#servicios .servicios-banner .page .icon {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: auto 2.5rem auto auto;
+  text-align: right;
+  font-size: 80px;
+  line-height: 1.3;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1.25);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1.25);
+  -moz-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1.25);
+  -o-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1.25);
+}
+
+main .second section#servicios .servicios-banner .page .icon.reverse {
+  position: absolute;
+  left: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto auto auto 2.5rem;
+  text-align: left;
+}
+
+main .second section#servicios .servicios-banner #p1, main .second section#servicios .servicios-banner #p2, main .second section#servicios .servicios-banner #p3, main .second section#servicios .servicios-banner #p4, main .second section#servicios .servicios-banner #p5, main .second section#servicios .servicios-banner #p6, main .second section#servicios .servicios-banner #p7 {
+  left: 0;
+  background-blend-mode: multiply;
+  background: #343944;
+}
+
+main .second section#servicios .servicios-banner #p1 {
+  background-image: url("../images/certificados.png");
+  background-size: cover;
+  background-position: center;
+}
+
+main .second section#servicios .servicios-banner #p2 {
+  background-image: url("../images/firma-remota.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .second section#servicios .servicios-banner #p3 {
+  background-image: url("../images/massive.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .second section#servicios .servicios-banner #p4 {
+  background-image: url("../images/longeva.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .second section#servicios .servicios-banner #p5 {
+  background-image: url("../images/timestamp.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .second section#servicios .servicios-banner #p6 {
+  background-image: url("../images/validate.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .second section#servicios .servicios-banner #p7 {
+  background-image: url("../images/pki.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .second section#servicios .servicios-banner #t2:target #p1 .icon, main .second section#servicios .servicios-banner #t3:target #p1 .icon, main .second section#servicios .servicios-banner #t4:target #p1 .icon, main .second section#servicios .servicios-banner #t5:target #p1 .icon, main .second section#servicios .servicios-banner #t6:target #p1 .icon, main .second section#servicios .servicios-banner #t7:target #p1 .icon {
+  -webkit-filter: blur(3px);
+}
+
+main .second section#servicios .servicios-banner .icon {
+  color: #fff;
+  font-size: 32px;
+  display: block;
+}
+
+main .second section#servicios .servicios-banner .icon::before {
+  color: #d8494e;
+}
+
+main .second section#servicios .servicios-banner ul#menu .icon:hover {
+  opacity: 0.5;
+}
+
+main .second section#servicios .servicios-banner .page .icon .title {
+  margin-bottom: 20px;
+}
+
+main .second section#servicios .servicios-banner #t2:target ul#menu .icon, main .second section#servicios .servicios-banner #t3:target ul#menu .icon, main .second section#servicios .servicios-banner #t4:target ul#menu .icon, main .second section#servicios .servicios-banner #t5:target ul#menu .icon, main .second section#servicios .servicios-banner #t6:target ul#menu .icon, main .second section#servicios .servicios-banner #t7:target ul#menu .icon {
+  transform: scale(0.6);
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  -webkit-transition-delay: .25s;
+          transition-delay: .25s;
+}
+
+main .second section#servicios .servicios-banner #t2:target #dos, main .second section#servicios .servicios-banner #t3:target #tres, main .second section#servicios .servicios-banner #t4:target #cuatro, main .second section#servicios .servicios-banner #t5:target #cinco, main .second section#servicios .servicios-banner #t6:target #seis, main .second section#servicios .servicios-banner #t7:target #siete {
+  transform: scale(1.2) !important;
+  -webkit-transform: scale(1.2) !important;
+  -moz-transform: scale(1.2) !important;
+  -o-transform: scale(1.2) !important;
+}
+
+main .second section#servicios .servicios-banner ul#menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  margin: auto;
+  height: 100%;
+  width: 15%;
+  padding: 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+main .second section#servicios .servicios-banner ul#menu.reverse {
+  right: 0;
+  left: auto;
+  -webkit-box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+main .second section#servicios .servicios-banner #menu .icon {
+  margin: 20px 0;
+  transition: all .5s ease-out !important;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+
+main .second section#servicios .servicios-banner a {
+  text-decoration: none;
+}
+
+main .second section#servicios .servicios-banner .title, main .second section#servicios .servicios-banner .hint {
+  display: block;
+  width: 90%;
+}
+
+main .second section#servicios .servicios-banner .title {
+  color: #d8494e;
+  font-size: 36px;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  main .second section#servicios .servicios-banner .title {
+    font-size: 30px;
+  }
+}
+
+main .second section#servicios .servicios-banner .hint {
+  font-size: 21px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 10;
+}
+
+main .second section#servicios .servicios-banner .hint a {
+  color: #ffc000;
+  transition: all 250ms ease-out;
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+}
+
+main .second section#servicios .servicios-banner .hint a:hover {
+  color: #FFF;
+}
+
+main .second section#servicios .servicios-banner .line-trough {
+  text-decoration: line-through;
+}
+
+main .second section#servicios .servicios-banner #t2:target .page#p2 .icon, main .second section#servicios .servicios-banner #t3:target .page#p3 .icon, main .second section#servicios .servicios-banner #t4:target .page#p4 .icon, main .second section#servicios .servicios-banner #t5:target .page#p5 .icon, main .second section#servicios .servicios-banner #t6:target .page#p6 .icon, main .second section#servicios .servicios-banner #t7:target .page#p7 .icon {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+main .third {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2d4351), to(#2b3842));
+  background-image: linear-gradient(to right bottom, #2d4351, #2b3842);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+main .third section#developer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  max-width: 1300px;
+  height: auto;
+  margin: 8rem 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+main .third section#developer h1 {
+  color: #ffffff;
+  padding: 0;
+}
+
+main .third section#developer p {
+  width: 100%;
+}
+
+main .third section#developer .api-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 300px;
+  margin-top: 3rem;
+}
+
+main .third section#developer .api-preview .code-editor > pre > code.language-json {
+  -webkit-animation: fadeInScale 0.5s ease-in-out;
+          animation: fadeInScale 0.5s ease-in-out;
+}
+
+main .third section#developer .api-preview .code-editor > pre > code.language-json#post-code {
+  display: none;
+}
+
+main .third section#developer .api-preview .code-editor > pre > code.language-json#put-code {
+  display: none;
+}
+
+main .third section#developer .api-preview .code-editor > pre > code.language-json#post2-code {
+  display: none;
+}
+
+@-webkit-keyframes fadeInScale {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+main .third section#developer .api-preview input[type="radio"] {
+  display: none;
+}
+
+main .third section#developer .api-preview input[id="post-code"]:checked ~ code.language-json#post-code {
+  display: block;
+  margin-top: 0px;
+}
+
+main .third section#developer .api-preview input[id="put-code"]:checked ~ code.language-json#put-code {
+  display: block;
+  margin-top: -18px;
+}
+
+main .third section#developer .api-preview input[id="post2-code"]:checked ~ code.language-json#post2-code {
+  display: block;
+  margin-top: -36px;
+}
+
+main .third section#developer .api-preview img {
+  display: none;
+}
+
+main .third section#developer .api-preview .requests {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem;
+  width: 87%;
+}
+
+main .third section#developer .api-preview .requests label.single-request {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #ffffff;
+  padding: 2px 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+main .third section#developer .api-preview .requests label.single-request:hover {
+  background-color: #ffffff;
+  color: #343944;
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+main .third section#developer .api-preview .requests label.single-request:active {
+  background-color: #d8494e;
+  color: #f8f8f8;
+  border: 1px solid #d8494e;
+}
+
+main .third section#developer .api-preview .requests label.single-request p {
+  margin: 0;
+  vertical-align: middle;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
+}
+
+main .third section#developer .api-preview .requests label.single-request .req {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 1rem;
+  border-right: 1px solid #ffffff;
+  padding-right: 10px;
+  width: 50px;
+}
+
+main .third section#developer .api-preview .requests label.single-request .req.post {
+  color: #ffc000;
+}
+
+main .third section#developer .api-preview .requests label.single-request .req.get {
+  color: #80c13e;
+}
+
+main .third section#developer .api-preview .requests label.single-request .req.del {
+  color: #F46036;
+}
+
+main .third section#developer .api-preview .requests label.single-request .req.put {
+  color: #009cde;
+}
+
+main .third section#developer .api-preview .requests a {
+  width: 100%;
+  text-decoration: none;
+}
+
+main .third section#developer .api-preview .requests a .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  height: 36px;
+  border-radius: 3px;
+  background-color: #d8494e;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 2rem;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .third section#developer .api-preview .requests a .cta:hover {
+  background-color: #343944;
+}
+
+main .contact-form {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  max-width: 1440px;
+}
+
+@media (max-width: 1080px) {
+  main .contact-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+main .contact-form section#contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+  height: auto;
+  width: 80%;
+  max-width: 1440px;
+}
+
+@media (max-width: 1080px) {
+  main .contact-form section#contacto {
+    width: 90%;
+  }
+}
+
+main .contact-form section#contacto h3.success {
+  color: #6dab2d;
+  font-weight: 500;
+}
+
+main .contact-form section#contacto p {
+  margin: 1rem;
+}
+
+main .contact-form section#contacto .actions {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 2rem 0 2rem 0;
+}
+
+main .contact-form section#contacto a.btn {
+  text-decoration: none;
+  padding: .6rem 2rem;
+  background-color: #343944;
+  border: none;
+  color: #ffffff;
+  margin: 1rem;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .contact-form section#contacto a.btn:focus {
+  outline: none;
+}
+
+main .contact-form section#contacto a.btn:hover {
+  background-color: #1e2127;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+main .contact-form section#contacto a.btn span {
+  margin-left: 1rem !important;
+}
+
+main .contact-form section#contacto .btn-lg {
+  padding: 40px !important;
+  font-weight: 600 !important;
+  font-size: larger !important;
+  margin-bottom: 2.5rem !important;
+}
+
+main .contact-form section#contacto ul.instructions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  list-style: none;
+  padding-top: 3rem;
+  line-height: 40px;
+  max-width: 1200px;
+}
+
+main .contact-form section#contacto ul.instructions > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  position: relative;
+  padding: 2em 0 2em 0;
+  margin: 1em;
+  color: #f8f8f8;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  list-style: none;
+  font-size: 16px;
+}
+
+@media (max-width: 959px) {
+  main .contact-form section#contacto ul.instructions > li {
+    width: 80%;
+  }
+}
+
+@media (max-width: 570px) {
+  main .contact-form section#contacto ul.instructions > li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2em;
+  }
+}
+
+main .contact-form section#contacto ul.instructions > li .instructions-hero {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  margin-left: -20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 500px) {
+  main .contact-form section#contacto ul.instructions > li .instructions-hero {
+    margin: 0 0 20px 0;
+  }
+}
+
+main .contact-form section#contacto ul.instructions > li .instructions-hero#desktop {
+  background-image: url("../images/desktop.svg");
+  background-size: 80%;
+  background-position: center;
+  background-color: #cbc6d2;
+}
+
+main .contact-form section#contacto ul.instructions > li .instructions-hero#mobile {
+  background-image: url("../images/mobile.svg");
+  background-size: 80%;
+  background-position: center;
+  background-color: #c6c9d2;
+}
+
+main .contact-form section#contacto ul.instructions > li .content-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 1rem;
+}
+
+main .contact-form section#contacto ul.instructions > li .content-list-item a {
+  text-decoration: none;
+  margin: .5rem;
+}
+
+main .contact-form section#contacto ul.instructions > li .content-list-item p {
+  color: #343944;
+  text-align: left;
+  margin: .5rem;
+}
+
+main .contact-form section#contacto ul.instructions > li .content-list-item span {
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #798398;
+  text-align: left;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  line-height: 24px;
+  margin-bottom: 1rem;
+  max-width: 320px;
+}
+
+main .contact-form section#contacto ul.instructions > li .content-list-item span:hover {
+  color: #343944;
+}
+
+main .contact-form section#contacto ul.instructions > li .content-list-item .stores-download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .contact-form section#contacto ul.instructions > li .content-list-item .stores-download a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-decoration: none;
+  margin: .5rem;
+}
+
+main .contact-form section#contacto ul.instructions > li .content-list-item .stores-download a img {
+  width: 150px;
+  height: auto;
+}
+
+main .contact-form section#contacto .grid {
+  max-width: 1024px;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin: 2rem 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .contact-form section#contacto .grid .row-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1rem 0 0 0;
+  height: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 960px) {
+  main .contact-form section#contacto .grid .row-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .contact-form section#contacto .grid .row-grid.details {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: none;
+  transition: none;
+}
+
+main .contact-form section#contacto .grid .row-grid.details:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+main .contact-form section#contacto .grid .row-grid.details:active {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .contact-form section#contacto .grid .row-grid.head-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: auto;
+  padding-bottom: .2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: none;
+  transition: none;
+}
+
+@media (max-width: 960px) {
+  main .contact-form section#contacto .grid .row-grid.head-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .contact-form section#contacto .grid .row-grid.head-row .left-row {
+    width: auto;
+  }
+  main .contact-form section#contacto .grid .row-grid.head-row .right-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+main .contact-form section#contacto .grid .row-grid .left-row {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: .5rem 0 .5rem .5rem;
+}
+
+main .contact-form section#contacto .grid .row-grid .left-row.border {
+  border-right: 1px solid #b3b8c5;
+}
+
+@media (max-width: 960px) {
+  main .contact-form section#contacto .grid .row-grid .left-row.border {
+    border-right: 0px;
+    border-bottom: 1px solid #60697e;
+    padding: 1rem 0 !important;
+  }
+}
+
+@media (max-width: 960px) {
+  main .contact-form section#contacto .grid .row-grid .left-row {
+    width: 98% !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1rem;
+    border-right: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .contact-form section#contacto .grid .row-grid .left-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-right: 0px;
+  }
+}
+
+main .contact-form section#contacto .grid .row-grid .right-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem 0 .5rem 0;
+}
+
+@media (max-width: 960px) {
+  main .contact-form section#contacto .grid .row-grid .right-row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  main .contact-form section#contacto .grid .row-grid .right-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .contact-form section#contacto .grid .row-grid .right-row .column-grid .text-content {
+  font-weight: 600;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 1rem 0 0;
+}
+
+@media (max-width: 960px) {
+  main .contact-form section#contacto .grid .row-grid .column-grid {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .contact-form section#contacto .grid .row-grid .column-grid.organization .title, main .contact-form section#contacto .grid .row-grid .column-grid.organization .text-content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  main .contact-form section#contacto .grid .row-grid .column-grid {
+    width: 100% !important;
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid.icon-col {
+  width: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 600px) {
+  main .contact-form section#contacto .grid .row-grid .column-grid.icon-col {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  main .contact-form section#contacto .grid .row-grid .column-grid.icon-col h2 {
+    margin: 1rem 0 1rem 1rem;
+  }
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid.w-1 {
+  min-height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: .2rem;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .title i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+  color: #4d535f;
+  font-size: 18px;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .title i.small {
+  font-size: 12px;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .title span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #d8494e;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .title span.name {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+@media (max-width: 500px) {
+  main .contact-form section#contacto .grid .row-grid .column-grid .title.name-label, main .contact-form section#contacto .grid .row-grid .column-grid .title.description-label, main .contact-form section#contacto .grid .row-grid .column-grid .title.username-label {
+    display: none;
+  }
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .text-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .2rem;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .text-content span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #343944;
+  line-height: 21px;
+  text-align: left;
+  word-wrap: break-word;
+  margin: .5rem 0 .5rem 0;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .text-content span.name {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-grid .text-content span.website {
+  margin-right: 0px;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 40px 0 0 40px;
+  width: 380px !important;
+}
+
+@media (max-width: 960px) {
+  main .contact-form section#contacto .grid .row-grid .column-actions {
+    width: 80% !important;
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  main .contact-form section#contacto .grid .row-grid .column-actions {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-top: 1px solid #999fac;
+    min-width: 90%;
+    border-radius: 0px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions .list-actions {
+  margin: 1rem .5rem 1rem .5rem;
+  background-color: transparent;
+  color: #343944;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions .list-actions:hover {
+  color: #4d535f;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions .list-actions.disabled {
+  color: #999fac;
+  opacity: .5 !important;
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions .list-actions.delete {
+  color: #d8494e;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions .list-actions.delete:hover {
+  color: #e67478;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions a.title-actions {
+  text-decoration: none;
+  text-align: right;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions a.title-actions span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #d8494e;
+}
+
+main .contact-form section#contacto .grid .row-grid .column-actions a.title-actions i {
+  margin-left: .5rem;
+  color: #d8494e;
+}
+
+main .contact-form section#contacto h1 {
+  color: #343944;
+}
+
+main .contact-form section#contacto h3 {
+  color: #343944;
+}
+
+main .contact-form section#contacto p {
+  color: #343944;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+main .contact-form section#contacto .error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 600px;
+  width: 100%;
+  margin: 5px 0;
+  background-color: rgba(214, 111, 111, 0.7);
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+  -webkit-animation: fadeInScale 0.5s ease-in-out;
+          animation: fadeInScale 0.5s ease-in-out;
+}
+
+@keyframes fadeInScale {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+main .contact-form section#contacto .error p {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #f8f8f8;
+  margin: .5rem 0;
+}
+
+main .contact-form section#contacto form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 3rem;
+}
+
+main .contact-form section#contacto form .has-error {
+  color: #d8494e !important;
+}
+
+main .contact-form section#contacto form p {
+  font-style: italic;
+  font-size: 13px;
+}
+
+main .contact-form section#contacto form p.info-block {
+  color: #343944 !important;
+}
+
+main .contact-form section#contacto form p.help-block {
+  color: #d8494e !important;
+}
+
+main .contact-form section#contacto form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+main .contact-form section#contacto form .form-group .sub-group-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .contact-form section#contacto form .form-group .sub-group-row.half {
+  width: 40% !important;
+}
+
+main .contact-form section#contacto form .form-group .sub-group {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .contact-form section#contacto form .form-group .sub-group, main .contact-form section#contacto form .form-group .sub-group-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .contact-form section#contacto form .form-group .sub-group .info-box, main .contact-form section#contacto form .form-group .sub-group-row .info-box {
+  height: 20px;
+  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background-color: #4d535f;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-size: 12px;
+}
+
+main .contact-form section#contacto form .form-group .sub-group .info-box i, main .contact-form section#contacto form .form-group .sub-group-row .info-box i {
+  text-align: center;
+  color: #ffffff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .contact-form section#contacto form .form-group .sub-group .info-box:hover, main .contact-form section#contacto form .form-group .sub-group-row .info-box:hover {
+  background-color: #ffffff;
+}
+
+main .contact-form section#contacto form .form-group .sub-group .info-box:hover i, main .contact-form section#contacto form .form-group .sub-group-row .info-box:hover i {
+  color: #4d535f;
+}
+
+main .contact-form section#contacto form input[name="phone"] {
+  width: 45%;
+}
+
+@media (max-width: 560px) {
+  main .contact-form section#contacto form input[name="phone"] {
+    width: 100%;
+  }
+}
+
+main .contact-form section#contacto form input[name="email"] {
+  width: 45%;
+}
+
+@media (max-width: 560px) {
+  main .contact-form section#contacto form input[name="email"] {
+    width: 100%;
+  }
+}
+
+main .contact-form section#contacto form textarea {
+  width: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 1rem .5rem;
+  margin: 5px 0;
+  color: #343944;
+  height: 120px;
+  font-size: 0.8rem;
+  font-weight: 100;
+  resize: none;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .contact-form section#contacto form textarea:focus {
+  outline: none;
+  border-color: #80c13e;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+main .contact-form section#contacto form textarea::-webkit-input-placeholder {
+  color: #b3b8c5;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto form textarea:-ms-input-placeholder {
+  color: #b3b8c5;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto form textarea::-ms-input-placeholder {
+  color: #b3b8c5;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto form textarea::placeholder {
+  color: #b3b8c5;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto form .check-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin: 5px 0;
+  padding: 0 1rem;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+main .contact-form section#contacto form .check-area .check-single {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 2rem auto;
+  border-bottom: 1px solid #d8494e;
+  padding: 1rem 0;
+  /* Base for label styling */
+  /* checkbox aspect */
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */
+}
+
+main .contact-form section#contacto form .check-area .check-single label, main .contact-form section#contacto form .check-area .check-single a {
+  text-decoration: none;
+  color: #343944;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+main .contact-form section#contacto form .check-area .check-single label strong, main .contact-form section#contacto form .check-area .check-single a strong {
+  font-weight: 500;
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:not(:checked),
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:not(:checked) + label,
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:not(:checked) + label:before,
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:not(:checked) + label:after,
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .1em;
+  left: .3em;
+  font-size: 1.5em;
+  line-height: 0.8;
+  color: #09ad7e;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:disabled:not(:checked) + label:before,
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:disabled:checked + label:before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+
+main .contact-form section#contacto form .check-area .check-single input[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+
+main .contact-form section#contacto form .check-area .check-single p {
+  width: 100%;
+  margin: 0;
+}
+
+main .contact-form section#contacto form select {
+  height: 50px;
+  width: 100% !important;
+}
+
+main .contact-form section#contacto form input, main .contact-form section#contacto form select {
+  width: 96%;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 1rem .5rem;
+  margin: 5px 0;
+  color: #343944;
+  font-size: 0.8rem;
+  font-weight: 100;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .contact-form section#contacto form input:focus, main .contact-form section#contacto form select:focus {
+  outline: none;
+  border-color: #80c13e;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+main .contact-form section#contacto form input::-webkit-input-placeholder, main .contact-form section#contacto form select::-webkit-input-placeholder {
+  color: #b3b8c5;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto form input:-ms-input-placeholder, main .contact-form section#contacto form select:-ms-input-placeholder {
+  color: #b3b8c5;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto form input::-ms-input-placeholder, main .contact-form section#contacto form select::-ms-input-placeholder {
+  color: #b3b8c5;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto form input::placeholder, main .contact-form section#contacto form select::placeholder {
+  color: #b3b8c5;
+  font-weight: 300;
+}
+
+main .contact-form section#contacto form input:hover, main .contact-form section#contacto form select:hover {
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+main .contact-form section#contacto form .btn-primary {
+  background-color: #343944 !important;
+  font-weight: 400;
+}
+
+main .contact-form section#contacto form .btn-primary#enrollment-cloud-submit {
+  max-width: 120px;
+}
+
+main .contact-form section#contacto form .btn-danger {
+  background-color: #F46036 !important;
+  padding: .444rem 2rem !important;
+}
+
+main .contact-form section#contacto form .btn-danger#cancel-button {
+  max-width: 120px;
+}
+
+main .contact-form section#contacto form .btn-danger:hover {
+  background-color: #ea3e0d !important;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+main .contact-form section#contacto form button, main .contact-form section#contacto form input.btn.btn-primary, main .contact-form section#contacto form a.btn.btn-danger {
+  text-decoration: none;
+  padding: .6rem 2rem;
+  background-color: #d8494e;
+  border: none;
+  color: #ffffff;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .contact-form section#contacto form button:focus, main .contact-form section#contacto form input.btn.btn-primary:focus, main .contact-form section#contacto form a.btn.btn-danger:focus {
+  outline: none;
+}
+
+main .contact-form section#contacto form button:hover, main .contact-form section#contacto form input.btn.btn-primary:hover, main .contact-form section#contacto form a.btn.btn-danger:hover {
+  background-color: #c42a2f;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+main .contact-form .contact-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: rgba(52, 57, 68, 0.8);
+  border-radius: 5px 0 0 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1080px) {
+  main .contact-form .contact-info {
+    border-radius: 5px;
+    margin-bottom: 5rem;
+  }
+}
+
+main .contact-form .contact-info .info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem;
+}
+
+main .contact-form .contact-info .info-box i {
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 1rem;
+}
+
+main .contact-form .contact-info .info-box p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+main .cookie-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background-image: url("../images/policy-bg.svg"), -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#eaeaea));
+  background-image: url("../images/policy-bg.svg"), linear-gradient(to bottom, #f7f7f7, #eaeaea);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+main .cookie-content section#cookie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 90%;
+  max-width: 1300px;
+  height: auto;
+  margin: 8rem auto;
+  color: #343944;
+}
+
+main .cookie-content section#cookie h1 {
+  color: #d8494e;
+  margin-top: 0;
+  margin-bottom: 6rem;
+  padding: 0;
+}
+
+main .cookie-content section#cookie h5 {
+  color: #d8494e;
+}
+
+main .cookie-content section#cookie ul {
+  color: #343944;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+}
+
+main .policy-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background-image: url("../images/policy-bg.svg"), -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#eaeaea));
+  background-image: url("../images/policy-bg.svg"), linear-gradient(to bottom, #f7f7f7, #eaeaea);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+main .policy-content section#policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 90%;
+  max-width: 1300px;
+  height: auto;
+  margin: 8rem auto;
+  color: #343944;
+}
+
+main .policy-content section#policy h1 {
+  color: #d8494e;
+  margin-top: 0;
+  margin-bottom: 6rem;
+  padding: 0;
+}
+
+main .policy-content section#policy h5 {
+  color: #d8494e;
+}
+
+main .policy-content section#policy ul {
+  color: #343944;
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+main .policy-content section#policy ul#letters {
+  list-style: lower-alpha;
+}
+
+main .policy-content section#policy ul.circle {
+  list-style: circle;
+}
+
+main .policy-content section#policy ul li {
+  margin: .5rem 0 .5rem 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+main .policy-content section#policy p {
+  font-size: 16px;
+}
+
+main .policy-content section#policy p a.go-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 0 30px;
+  background-color: #d8494e;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+main .policy-content section#policy p a.go-button span {
+  color: #ffffff;
+  text-align: center;
+}
+
+main .policy-content section#policy p a.go-button:hover {
+  -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1em;
+  color: #f8f8f8;
+  height: auto;
+  background-color: #343944;
+  -webkit-box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+footer .footer-nav .footer-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  margin: 20px;
+}
+
+footer .footer-nav .footer-column h4 {
+  margin-top: 0;
+  font-size: 1em;
+  color: #ffc000;
+}
+
+footer .footer-nav .footer-column ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  list-style: none;
+}
+
+footer .footer-nav .footer-column ul li {
+  display: list-item;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  list-style: none;
+  margin-left: 0px;
+  margin-bottom: 5px;
+}
+
+footer .footer-nav .footer-column ul li a {
+  text-decoration: none;
+  color: #343944;
+  text-align: left;
+}
+
+footer .footer-nav .footer-column ul li a:hover {
+  color: #79ccff;
+}
+
+footer .languages-footer {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  footer .languages-footer {
+    height: 30px;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1rem;
+  }
+  footer .languages-footer ul.lang-selector {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+  }
+  footer .languages-footer ul.lang-selector li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    font-size: 14px;
+    padding: 0 1rem;
+    margin: 0;
+    border-right: 1px solid #b3b8c5;
+    cursor: pointer;
+  }
+  footer .languages-footer ul.lang-selector li:first-child {
+    border-right: 0;
+    cursor: default;
+  }
+  footer .languages-footer ul.lang-selector li:last-child {
+    border-right: 0;
+  }
+  footer .languages-footer ul.lang-selector li i {
+    font-size: 21px;
+  }
+  footer .languages-footer ul.lang-selector li a {
+    height: 100%;
+    text-decoration: none;
+    color: #b3b8c5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  footer .languages-footer ul.lang-selector li a:hover {
+    color: #ffffff;
+  }
+}
+
+footer .copyright {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+footer .copyright .logos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .copyright .logos a img.bit4id {
+  margin: 1rem 20px;
+  width: 40px;
+}
+
+footer .copyright .logos img.uanataca {
+  margin: 1rem 20px;
+  width: 120px;
+}
+
+footer .copyright p {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+footer .copyright p a {
+  text-decoration: none;
+  color: #d8494e;
+  font-weight: 500;
+}
+
+@media (max-width: 1081px) and (min-width: 954px) {
+  main .first section#intro {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .first section#intro .payoff a {
+    margin-bottom: 5rem;
+  }
+  main .third section#developer h1 {
+    margin-bottom: 1rem;
+  }
+  main .third section#developer .api-preview {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+  }
+  main .third section#developer .api-preview img {
+    display: none;
+  }
+  main .third section#developer .api-preview .requests {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1080px) {
+  main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  main .first {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    padding: 0 0 5rem 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
+  main .first#first {
+    padding: 0;
+  }
+  main .first#policy {
+    background-image: url("../images/policy-bg.svg"), -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#eaeaea));
+    background-image: url("../images/policy-bg.svg"), linear-gradient(to bottom, #f7f7f7, #eaeaea);
+  }
+  main .first section#intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: -30px;
+    background: transparent;
+    width: 100%;
+    height: auto;
+  }
+  main .first section#intro img.intro {
+    width: 100% !important;
+    margin-top: -500px;
+    margin-bottom: 3rem;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1080px) and (max-width: 700px) {
+  main .first section#intro img.intro {
+    margin-top: -300px;
+  }
+}
+
+@media (max-width: 1080px) and (max-width: 420px) {
+  main .first section#intro img.intro {
+    margin-top: -233px;
+  }
+}
+
+@media (max-width: 1080px) {
+  main .first section#intro .payoff {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+  main .first section#intro .payoff h2 {
+    font-size: 1.8em;
+    font-weight: 200;
+    padding: 0;
+    margin: 1rem 0 4rem 0 !important;
+    color: #343944;
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 320px) and (max-width: 700px) {
+  main .first section#intro .payoff h2 {
+    margin: 1rem 0 2rem 0 !important;
+  }
+}
+
+@media (max-width: 1080px) {
+  main .first section#intro .payoff img {
+    width: 60px;
+    height: 60px;
+  }
+  main .first section#intro .payoff h3 {
+    margin: 0 0 20px 0;
+    color: #f8f8f8;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 1080px) and (max-width: 500px) {
+  main .first section#intro .payoff h3 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 1080px) {
+  main .first section#intro .payoff p {
+    color: #343944;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  main .first section#intro .payoff a {
+    width: 60%;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 1080px) and (max-width: 500px) {
+  main .first section#intro .payoff a {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1080px) {
+  main .first section#uanataca {
+    background: transparent;
+    width: 100%;
+    height: auto;
+  }
+  main .first section#uanataca h3 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #343944;
+    font-weight: 200;
+  }
+  main .first section#uanataca .presentation {
+    height: auto;
+    width: 90%;
+    border-radius: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .first section#politicas, main .first section#tramites, main .first section#descargas {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .first section#politicas h1, main .first section#tramites h1, main .first section#descargas h1 {
+    color: #343944;
+    margin: 6rem 0 3rem 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 200;
+    font-size: 1.8em;
+  }
+  main .second section#servicios h1 {
+    font-size: 1.8em;
+  }
+  main .third section#developer h1 {
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+  }
+  main .third section#developer .api-preview {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+  }
+  main .third section#developer .api-preview img {
+    display: block !important;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+  }
+  main .third section#developer .api-preview .code-editor {
+    display: none !important;
+  }
+  main .third section#developer .api-preview .requests {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  main .third section#developer .api-preview .requests .single-request {
+    display: none !important;
+  }
+  main .third section#developer .api-preview .requests a {
+    width: 100% !important;
+    text-decoration: none;
+    height: 50px !important;
+  }
+  main .third section#developer .api-preview .requests a .cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #d8494e;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  main .third section#developer .api-preview .requests a .cta:hover {
+    background-color: #343944;
+  }
+}
+
+* {
+  font-size: 1em;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  font-size: 16px;
+  color: #58595b;
+}
+
+p {
+  margin-bottom: 3.3em;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #58595b;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+@media (max-width: 953px) {
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+h4 {
+  font-size: 1.333em;
+}
+
+small, .font_small {
+  font-size: 0.75em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 11000;
+  color: #343944;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+@media (max-width: 1080px) {
+  nav {
+    height: 45px;
+  }
+}
+
+nav #header {
+  top: 0;
+  left: 0;
+  float: left;
+  width: auto;
+}
+
+nav #header #brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  z-index: 1;
+}
+
+nav #header #brand img {
+  margin-left: 20px;
+  height: 50px;
+  width: auto;
+}
+
+nav #caret {
+  display: inline-block;
+  margin: 0 0 0 15px;
+  height: 7px;
+  width: 7px;
+  border-left: 2px solid #343944;
+  border-bottom: 2px solid #343944;
+  -webkit-transform: rotate(-45deg) translateY(-4px);
+          transform: rotate(-45deg) translateY(-4px);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+nav #caret:hover {
+  border-left: 2px solid #d8494e;
+  border-bottom: 2px solid #d8494e;
+}
+
+nav li, nav #trigger2, nav #trigger {
+  top: 0;
+  list-style-type: none;
+  display: inline-block;
+  color: #343944;
+  margin: 0 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+nav ul.lang-selector-header {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+nav ul.lang-selector-header li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-size: 14px;
+  padding: 0 1rem;
+  margin: 0;
+  border-right: 1px solid #b3b8c5;
+  color: #b3b8c5;
+  cursor: pointer;
+}
+
+nav ul.lang-selector-header li:first-child {
+  border-right: 0;
+  cursor: default;
+}
+
+nav ul.lang-selector-header li:last-child {
+  border-right: 0;
+}
+
+nav ul.lang-selector-header li i {
+  font-size: 21px;
+}
+
+nav ul.lang-selector-header li a {
+  height: 100%;
+}
+
+nav #main {
+  left: 0;
+  top: 0;
+}
+
+nav #main a {
+  text-decoration: none;
+}
+
+nav li:hover, nav #trigger2:hover {
+  color: #d8494e;
+}
+
+nav #dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #343944;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 61px;
+  border-radius: 0 0 3px 3px;
+  height: 0;
+  overflow: hidden;
+  width: auto;
+  right: 4.1em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+nav #dropdown li {
+  font-size: 14px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+  padding: 0 2em;
+}
+
+nav #dropdown li:nth-last-child() {
+  border-bottom: 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav #dwn {
+  font-size: 0.8em;
+}
+
+nav input#trigger:checked ~ #dropdown, nav #dropdown:hover {
+  height: auto;
+  padding: 1rem 0 2rem 0;
+}
+
+nav #gestion:hover {
+  color: #496E91;
+}
+
+nav .x1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+nav #trigger2, nav #trigger {
+  display: none !important;
+}
+
+nav #x7 {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  nav #header {
+    width: 100%;
+    z-index: 12000;
+    height: 45px;
+  }
+  nav #header #brand {
+    width: 100%;
+    height: 45px;
+  }
+  nav #header #brand img {
+    margin-left: 20px;
+    height: 40px;
+    width: auto;
+  }
+  nav #main {
+    width: 95%;
+    height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: scroll;
+    z-index: 11000;
+    top: 50px;
+    text-align: left;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    background-color: #343944;
+    left: auto;
+  }
+  nav #main a, nav #main label {
+    width: 100%;
+  }
+  nav #main a li, nav #main label li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 60px;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0;
+    color: lightgrey;
+  }
+  nav #gestion {
+    display: block;
+  }
+  nav #gestion:checked + #dropdown {
+    overflow-y: scroll;
+    padding: 0;
+  }
+  nav #caret {
+    border-left: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+  }
+  nav #trigger2 {
+    font-size: 24px;
+    color: #343944;
+    display: inline-block !important;
+    cursor: pointer;
+  }
+  nav #x7:checked + #main {
+    height: calc(99vh - 50px);
+    border-radius: 10px;
+  }
+  nav #dropdown {
+    position: absolute;
+    top: 10px !important;
+    right: auto;
+    width: 90%;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 14px;
+    background-color: lightgrey;
+    -webkit-box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+  nav #dropdown a {
+    width: 100%;
+    height: auto;
+  }
+  nav #dropdown a li {
+    margin: 0;
+    height: 60px;
+    whidth: 100%;
+    color: #343944;
+    border-bottom: 1px solid #343944;
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 60px;
+  }
+}
+
+ul.subnav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 11000;
+  color: #f8f8f8;
+  margin-top: 60px;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  background-color: #343944;
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  z-index: 10999;
+  list-style: none;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+ul.subnav::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  ul.subnav {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+ul.subnav .side-overlay {
+  height: 60px;
+  position: fixed;
+  width: 25px;
+  top: 45px;
+}
+
+ul.subnav .side-overlay.left {
+  margin-left: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#343944), to(rgba(52, 57, 68, 0.1)));
+  background-image: linear-gradient(to right, #343944, rgba(52, 57, 68, 0.1));
+}
+
+ul.subnav .side-overlay.right {
+  margin-right: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#343944), to(rgba(52, 57, 68, 0.1)));
+  background-image: linear-gradient(to left, #343944, rgba(52, 57, 68, 0.1));
+}
+
+@media (max-width: 1080px) {
+  ul.subnav .side-overlay.right {
+    width: 100px;
+  }
+}
+
+ul.subnav li.servicios-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: auto;
+  font-size: 13px;
+}
+
+@media (max-width: 1080px) {
+  ul.subnav li.servicios-list-item {
+    width: 160px;
+  }
+}
+
+ul.subnav li.servicios-list-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: auto;
+  color: #f8f8f8;
+  text-decoration: none;
+}
+
+ul.subnav li.servicios-list-item a:hover {
+  color: #efb2b4;
+}
+
+ul.subnav li.servicios-list-item a.selected {
+  color: #e17377;
+}
+
+ul.subnav li.servicios-list-item a span {
+  padding: 0px 20px;
+  border-right: 1px solid lightgrey;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+ul.subnav li.servicios-list-item a span.last {
+  border-right: 0px;
+}
+
+@media (max-width: 1080px) {
+  ul.subnav {
+    margin-top: 45px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  @-webkit-keyframes show {
+    0% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 45px;
+    }
+  }
+}
+
+.languagepicker {
+  background-color: #343944;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  top: 64px;
+  right: 20px;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.languagepicker.service {
+  top: 124px;
+}
+
+@media (max-width: 1080px) {
+  .languagepicker {
+    display: none;
+  }
+}
+
+.languagepicker:hover {
+  width: 150px;
+  height: 160px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.languagepicker a {
+  width: 100%;
+  height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.languagepicker a:first-child {
+  cursor: default;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.languagepicker a:first-child li {
+  border: none;
+  padding: 10px 0 0 0;
+}
+
+.languagepicker a:last-child li {
+  border: none;
+}
+
+.languagepicker a li {
+  width: 100%;
+  display: block;
+  color: #b3b8c5;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #60697e;
+}
+
+.languagepicker a li:hover {
+  color: #ffffff;
+}
+
+.languagepicker a li i {
+  color: #b3b8c5;
+  font-size: 21px;
+}
+/*# sourceMappingURL=style.css.map */
